@@ -1,0 +1,34 @@
+diff --git a/browser/themes/shared/identity-block/identity-block.css b/browser/themes/shared/identity-block/identity-block.css
+index 11ff8f62c9e40fd2f523387a4325518f383f5d11..d6563e2ddf963caa34bee716c42f9d440c327b61 100644
+--- a/browser/themes/shared/identity-block/identity-block.css
++++ b/browser/themes/shared/identity-block/identity-block.css
+@@ -80,7 +80,7 @@
+ 
+ #identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button,
+ #urlbar-label-box {
+-  background-color: var(--urlbar-box-bgcolor);
++  background-color: light-dark(#cecece, rgb(66, 65, 77));
+   color: var(--urlbar-box-text-color);
+   padding-inline: 8px;
+   border-radius: var(--urlbar-icon-border-radius);
+@@ -174,16 +174,17 @@
+   }
+ 
+   #identity-icon {
+-    list-style-image: url(chrome://global/skin/icons/search-glass.svg);
++    list-style-image: url(chrome://global/skin/icons/search-glass.svg) !important;
++    fill-opacity: 0.5;
+   }
+ }
+ 
+ #urlbar[actiontype="extension"] > .urlbar-input-container > #identity-box #identity-icon {
+-  list-style-image: url(chrome://mozapps/skin/extensions/extension.svg);
++  list-style-image: url(chrome://mozapps/skin/extensions/extension.svg) !important;
+ }
+ 
+ #identity-box[pageproxystate="valid"].extensionPage #identity-icon {
+-  list-style-image: url(chrome://mozapps/skin/extensions/extension.svg);
++  list-style-image: url(chrome://mozapps/skin/extensions/extension.svg) !important;
+ }
+ 
+ #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,

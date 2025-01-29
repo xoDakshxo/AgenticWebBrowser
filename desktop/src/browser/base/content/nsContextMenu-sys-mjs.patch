@@ -1,0 +1,18 @@
+diff --git a/browser/base/content/nsContextMenu.sys.mjs b/browser/base/content/nsContextMenu.sys.mjs
+index 7f3dc585937c5ac96c0d09a786515305afb4fe1a..9216931e7d805743f0b00e74039be042456e63f3 100644
+--- a/browser/base/content/nsContextMenu.sys.mjs
++++ b/browser/base/content/nsContextMenu.sys.mjs
+@@ -1047,6 +1047,13 @@ export class nsContextMenu {
+         !this.isSecureAboutPage()
+     );
+ 
++    this.showItem(
++      "context-zenAddToWebPanel",
++      this.onLink && !this.onMailtoLink && !this.onTelLink
++    );
++
++    this.showItem("context-zenSplitLink", this.onLink && !this.onMailtoLink && !this.onTelLink);
++
+     let canNotStrip =
+       lazy.STRIP_ON_SHARE_CAN_DISABLE && !this.#canStripParams();
+ 
